@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:ital,wght@0,400;1,300&family=Roboto:wght@300&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+/* font-family: 'Playfair Display', serif; */
+
+/* Navbar css -------------------------------------------*/
+
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px gray;
+  border-bottom: 0px solid gray;
+}
+
+.nav-link {
+  font-weight: 300 !important;
+}
+
+.active {
+  border-bottom: 1px solid black;
+}
+
+.navbar-brand {
+  font-weight: bolder !important;
+  font-family: "roboto", "sans-serif";
+  letter-spacing: 3px;
+}
+
+
+
+
+/* CSS for Footer -----------------------------------------*/
+
+.footer {
+  color: white;
+  padding: 25px;
+  background: #000000;
+  background: -webkit-linear-gradient(to right,
+      #434343,
+      #000000);
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+.footer a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffefba;
+  border-bottom: 1px solid #ffefba;
+}
+
+
+/* page not found Css -----------------------------------------*/
+.pnf {
+  display: flex;
+  flex-direction: column;
+  min-height: 65vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf-title {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.pnf-heading {
+  font-weight: normal;
+}
+
+.pnf-btn {
+  color: black;
+  border: 1px solid black;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.pnf-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* contact us CSS------------------------------- */
+
+.contactus {
+  align-items: center;
+  justify-content: center;
+}
+
+.contactus img {
+  margin-top: 30px;
+}
+
+
+/* About Us CSS ------------------------------------*/
+
+.aboutus {
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+  margin-top: 40px;
+
+}
+
+.descripabout p {
+  text-align: justify;
+}
+
+/* Privacy Ploicy CSS ----------------------------*/
+
+.privacy {
+  align-items: center;
+  justify-content: center;
+}
+
+.descriptionpvc {
+  text-align: justify;
+  margin-top: 5px;
+}
+
+
+/* User Registration ------------------------------- */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 78vh;
+  flex-direction: column;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+}
+
+.form-container form {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.form-container form .title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+.form-container form input {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
+.form-container form button {
+  border: 1px solid black;
+  border-radius: 0;
+  background-color: #000;
+  color: white;
+  width: 250px;
+}
+
+.form-container form button:hover {
+  border: 1px solid black;
+  background: #000000;
+  background: -webkit-linear-gradient(to right,
+      #434343,
+      #000000);
+  background: linear-gradient(to right,
+      #434343,
+      #000000);
+}
+
+
+/* product link */
+
+.product-link {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+
+
+/* Orderspage */
+.orders {
+  text-align: -webkit-center;
+}
+
+.adminorders {
+  text-align: -webkit-center;
+
+}
+
+.homepagecard {
+  transition: all .2s ease-in-out;
+}
+
+.homepagecard:hover {
+  transform: scale(1.1);
+}
+
+.article {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article p {
+  font-weight: bold;
+}
