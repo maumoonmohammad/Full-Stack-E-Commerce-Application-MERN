@@ -26,7 +26,7 @@ const CreateProduct = () => {
 
     const getAllCategories = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/categories/get-category")
+            const response = await axios.get("https://impossible-ray-headscarf.cyclic.app/categories/get-category")
             if (response.data.success) {
                 setCategories(response.data?.category)
             }
@@ -58,7 +58,7 @@ const CreateProduct = () => {
             productData.append("quantity", quantity)
             productData.append("photo", photo)
             productData.append("category", category)
-            const response = await axios.post("http://localhost:8080/products/create-product", productData,
+            const response = await axios.post("https://impossible-ray-headscarf.cyclic.app/products/create-product", productData,
                 {
                     headers: {
                         "Authorization": data.token

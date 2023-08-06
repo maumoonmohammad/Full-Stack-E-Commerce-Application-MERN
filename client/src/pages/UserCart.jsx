@@ -63,7 +63,7 @@ const UserCart = () => {
         try {
 
 
-            const response = await axios.get('http://localhost:8080/products/braintree/token')
+            const response = await axios.get('https://impossible-ray-headscarf.cyclic.app/products/braintree/token')
             setClientToken(response?.data?.clientToken)
         } catch (error) {
             console.log(error)
@@ -80,7 +80,7 @@ const UserCart = () => {
         try {
             setLoading(true)
             const { nonce } = await instance.requestPaymentMethod()
-            const { response } = await axios.post("http://localhost:8080/products/braintree/payment", {
+            const { response } = await axios.post("https://impossible-ray-headscarf.cyclic.app/products/braintree/payment", {
                 nonce, cart
             }, {
                 headers: {
@@ -132,7 +132,7 @@ const UserCart = () => {
                                 <div className="row mb-2 p-3 card flex-row" key={i}>
                                     <div className="col-md-4">
                                         <img
-                                            src={`http://localhost:8080/products/product-photo/${p._id}`}
+                                            src={`https://impossible-ray-headscarf.cyclic.app/products/product-photo/${p._id}`}
                                             className="card-img-top" alt={p.name} width="100px" height="100px" />
                                     </div>
                                     <div className="col-md-8">

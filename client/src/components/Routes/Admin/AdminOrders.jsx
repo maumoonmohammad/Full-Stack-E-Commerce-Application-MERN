@@ -22,7 +22,7 @@ const AdminOrders = () => {
 
     const getOrders = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/auth/all-orders', {
+            const response = await axios.get('https://impossible-ray-headscarf.cyclic.app/auth/all-orders', {
                 headers: {
                     "Authorization": storedata?.token
                 }
@@ -46,7 +46,7 @@ const AdminOrders = () => {
 
     const handlechange = async (orderId, value) => {
         try {
-            const { data } = await axios.put(`http://localhost:8080/auth/order-status/${orderId}`, { status: value }, {
+            const { data } = await axios.put(`https://impossible-ray-headscarf.cyclic.app/auth/order-status/${orderId}`, { status: value }, {
                 headers: {
                     "Authorization": storedata?.token
                 }
@@ -109,7 +109,7 @@ const AdminOrders = () => {
                                                     <div className="row mb-2 p-3 card flex-row" key={i}>
                                                         <div className="col-md-4">
                                                             <img
-                                                                src={`http://localhost:8080/products/product-photo/${p._id}`}
+                                                                src={`https://impossible-ray-headscarf.cyclic.app/products/product-photo/${p._id}`}
                                                                 className="card-img-top" alt={p.name} width="100px" height="100px" />
                                                         </div>
                                                         <div className="col-md-8">

@@ -33,7 +33,7 @@ const AdminRoute = () => {
 
         const authCheck = async () => {
 
-            const response = await axios.get('http://localhost:8080/auth/admin-auth', {
+            const response = await axios.get('https://impossible-ray-headscarf.cyclic.app/auth/admin-auth', {
                 headers: {
                     "Authorization": data.token
                 }

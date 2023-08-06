@@ -21,7 +21,7 @@ const Register = () => {
     const handlesubmit = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.post('http://localhost:8080/auth/register', { name, email, password, phone, address, answer })
+            const response = await axios.post('https://impossible-ray-headscarf.cyclic.app/auth/register', { name, email, password, phone, address, answer })
             if (response.data.success) {
                 toast.success(response.data.message)
                 navigate("/login")

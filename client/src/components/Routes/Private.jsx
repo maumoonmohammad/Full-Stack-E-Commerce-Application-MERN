@@ -36,7 +36,7 @@ const PrivateRoute = () => {
 
         const authCheck = async () => {
 
-            const response = await axios.get('http://localhost:8080/auth/user-auth', {
+            const response = await axios.get('https://impossible-ray-headscarf.cyclic.app/auth/user-auth', {
                 headers: {
                     "Authorization": data?.token
                 }

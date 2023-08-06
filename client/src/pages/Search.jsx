@@ -17,7 +17,7 @@ const Search = () => {
 
                             <div className="card m-3" style={{ width: "18rem" }}  >
                                 <img
-                                    src={`http://localhost:8080/products/product-photo/${p._id}`}
+                                    src={`https://impossible-ray-headscarf.cyclic.app/products/product-photo/${p._id}`}
                                     className="card-img-top" alt={p.name} style={{ height: "75%" }} />
 
                                 <div className="card-body">

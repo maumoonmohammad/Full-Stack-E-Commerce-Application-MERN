@@ -16,7 +16,7 @@ const SearchInput = () => {
 
             e.preventDefault()
 
-            const response = await axios.get(`http://localhost:8080/products/search/${search}`)
+            const response = await axios.get(`https://impossible-ray-headscarf.cyclic.app/products/search/${search}`)
             if (response.data.success) {
                 dispatch(setresults(response.data.products))
                 navigate('/search')

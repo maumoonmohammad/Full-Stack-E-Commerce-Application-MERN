@@ -26,7 +26,7 @@ const Homepage = () => {
 
     const getTotal = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/products/product-count')
+            const response = await axios.get('https://impossible-ray-headscarf.cyclic.app/products/product-count')
             if (response.data.success) {
                 setTotal(response.data?.total)
             }
@@ -42,7 +42,7 @@ const Homepage = () => {
 
     const getAllCategories = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/categories/get-category")
+            const response = await axios.get("https://impossible-ray-headscarf.cyclic.app/categories/get-category")
 
             if (response.data.success) {
                 setCategories(response.data?.category)
@@ -60,7 +60,7 @@ const Homepage = () => {
     const getAllproducts = async () => {
         try {
             setLoading(true)
-            const response = await axios.get(`http://localhost:8080/products/product-list/${page}`)
+            const response = await axios.get(`https://impossible-ray-headscarf.cyclic.app/products/product-list/${page}`)
             setLoading(false)
             if (response.data.success) {
                 setProducts(response.data.products)
@@ -78,7 +78,7 @@ const Homepage = () => {
     // get filtered products
     const filterProducts = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/products/filter-products', { checked, radio })
+            const response = await axios.post('https://impossible-ray-headscarf.cyclic.app/products/filter-products', { checked, radio })
             if (response.data.success) {
                 setProducts(response.data?.products)
             }
@@ -129,7 +129,7 @@ const Homepage = () => {
     const loadMore = async () => {
         try {
             setLoading(true)
-            const response = await axios.get(`http://localhost:8080/products/product-list/${page}`)
+            const response = await axios.get(`https://impossible-ray-headscarf.cyclic.app/products/product-list/${page}`)
             setLoading(false)
             if (response.data.success) {
                 setProducts([...products, ...response.data?.products])
@@ -200,7 +200,7 @@ const Homepage = () => {
 
                             <div className="card m-3 p-2 homepagecard" style={{ width: "18rem" }} key={i} >
                                 <img
-                                    src={`http://localhost:8080/products/product-photo/${p._id}`}
+                                    src={`https://impossible-ray-headscarf.cyclic.app/products/product-photo/${p._id}`}
                                     className="card-img-top" alt={p.name} style={{ height: "75%" }} />
                                 <hr />
                                 <div className="card-body">

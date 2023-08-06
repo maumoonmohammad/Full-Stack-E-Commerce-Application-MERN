@@ -9,7 +9,7 @@ const AdminMenu = () => {
                     <h4>Admin Panel</h4>
                     <NavLink to="/admin/dashboard/create-category" className="list-group-item list-group-item-action">Create Category</NavLink>
                     <NavLink to="/admin/dashboard/create-product" className="list-group-item list-group-item-action">Create Product</NavLink>
-                    <NavLink to="/admin/dashboardhttp://localhost:8080/products" className="list-group-item list-group-item-action">Products</NavLink>
+                    <NavLink to="/admin/dashboardhttps://impossible-ray-headscarf.cyclic.app/products" className="list-group-item list-group-item-action">Products</NavLink>
                     <NavLink to="/admin/dashboard/users" className="list-group-item list-group-item-action">Users</NavLink>
                     <NavLink to="/admin/dashboard/orders" className="list-group-item list-group-item-action">Orders</NavLink>
 
