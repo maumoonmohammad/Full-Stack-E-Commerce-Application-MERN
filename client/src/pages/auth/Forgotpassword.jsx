@@ -21,7 +21,7 @@ const Forgotpassword = () => {
 
         try {
 
-            await axios.post('/auth/forgotpassword', { email, newpassword, answer }).then((response) => {
+            await axios.post('http://localhost:8080/auth/forgotpassword', { email, newpassword, answer }).then((response) => {
                 if (response.data.success) {
 
                     toast.success(response.data.message)

@@ -9,7 +9,7 @@ const CategoryProduct = () => {
     const params = useParams()
     const getProductbyCat = async () => {
         try {
-            const response = await axios.get(`/products/product-category/${params.slug}`)
+            const response = await axios.get(`http://localhost:8080/products/product-category/${params.slug}`)
             if (response.data?.success) {
                 setProducts(response.data?.products)
                 setCategory(response.data?.category)
@@ -32,7 +32,7 @@ const CategoryProduct = () => {
 
                             <div className="card m-3" style={{ width: "18rem" }} key={i} >
                                 <img
-                                    src={`/products/product-photo/${p._id}`}
+                                    src={`http://localhost:8080/products/product-photo/${p._id}`}
                                     className="card-img-top" alt={p.name} style={{ height: "75%" }} />
 
                                 <div className="card-body">

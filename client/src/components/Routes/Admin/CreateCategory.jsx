@@ -25,7 +25,7 @@ const CreateCategory = () => {
     const handlesubmit = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.post("/categories/create-category", { name },
+            const response = await axios.post("http://localhost:8080/categories/create-category", { name },
                 {
                     headers: {
 
@@ -48,7 +48,7 @@ const CreateCategory = () => {
 
     const getAllCategories = async () => {
         try {
-            const response = await axios("/categories/get-category")
+            const response = await axios("http://localhost:8080/categories/get-category")
             if (response.data.success) {
                 setCategories(response.data.category)
             }
@@ -73,7 +73,7 @@ const CreateCategory = () => {
     const handleupdate = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.put(`/categories/update-category/${selected._id}`, { name: updatedname },
+            const response = await axios.put(`http://localhost:8080/categories/update-category/${selected._id}`, { name: updatedname },
                 {
                     headers: {
                         "Authorization": data.token
@@ -99,7 +99,7 @@ const CreateCategory = () => {
 
     const handledelete = async (id) => {
         try {
-            const response = await axios.delete(`/categories/delete-category/${id}`,
+            const response = await axios.delete(`http://localhost:8080/categories/delete-category/${id}`,
                 {
                     headers: {
                         "Authorization": data.token

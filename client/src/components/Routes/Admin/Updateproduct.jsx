@@ -27,7 +27,7 @@ const Updateroduct = () => {
     //get single Product
     const SingleProduct = async () => {
         try {
-            const response = await axios.get(`/products/single-product/${params.slug}`)
+            const response = await axios.get(`http://localhost:8080/products/single-product/${params.slug}`)
             if (response.data.success) {
                 console.log(response.data)
                 setName(response.data.product.name)
@@ -51,7 +51,7 @@ const Updateroduct = () => {
 
     const getAllCategories = async () => {
         try {
-            const response = await axios.get("/categories/get-category")
+            const response = await axios.get("http://localhost:8080/categories/get-category")
             if (response.data.success) {
                 setCategories(response.data?.category)
             }
@@ -79,7 +79,7 @@ const Updateroduct = () => {
             productData.append("quantity", quantity)
             photo && productData.append("photo", photo)
             productData.append("category", category)
-            const response = await axios.put(`/products/update-product/${id}`, productData,
+            const response = await axios.put(`http://localhost:8080/products/update-product/${id}`, productData,
                 {
                     headers: {
                         "Authorization": data.token
@@ -100,7 +100,7 @@ const Updateroduct = () => {
     const handledelete = async () => {
         try {
 
-            const response = await axios.delete(`/products/delete-product/${id}`,
+            const response = await axios.delete(`http://localhost:8080/products/delete-product/${id}`,
                 {
                     headers: {
                         "Authorization": data.token
@@ -108,7 +108,7 @@ const Updateroduct = () => {
                 })
             if (response.data.success) {
                 toast.success('Product deleted Successfully')
-                navigate('/admin/dashboard/products')
+                navigate('/admin/dashboardhttp://localhost:8080/products')
             } else {
                 console.log(response.data.message)
             }
@@ -163,7 +163,7 @@ const Updateroduct = () => {
                                     ) : (
                                         <div className="text-center">
                                             <img
-                                                src={`/products/product-photo/${id}`} //Photo preview
+                                                src={`http://localhost:8080/products/product-photo/${id}`} //Photo preview
                                                 alt='nothing here'
                                                 height={"200px"}
                                                 className='img img-responsive' />

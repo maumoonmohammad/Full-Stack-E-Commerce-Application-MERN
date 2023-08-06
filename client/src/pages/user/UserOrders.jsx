@@ -17,7 +17,7 @@ const UserOrders = () => {
 
     const getOrders = async () => {
         try {
-            const response = await axios.get('/auth/orders', {
+            const response = await axios.get('http://localhost:8080/auth/orders', {
                 headers: {
                     "Authorization": storedata?.token
                 }
@@ -84,7 +84,7 @@ const UserOrders = () => {
                                                 <div className="row mb-2 p-3 card flex-row" key={i}>
                                                     <div className="col-md-4">
                                                         <img
-                                                            src={`/products/product-photo/${p._id}`}
+                                                            src={`http://localhost:8080/products/product-photo/${p._id}`}
                                                             className="card-img-top" alt={p.name} width="100px" height="100px" />
                                                     </div>
                                                     <div className="col-md-8">

@@ -17,7 +17,7 @@ const Products = () => {
 
     const getAllProducts = async () => {
         try {
-            const response = await axios.get("/products/get-products")
+            const response = await axios.get("http://localhost:8080/products/get-products")
             if (response.data.success) {
                 setProducts(response.data.products)
 
@@ -57,7 +57,7 @@ const Products = () => {
                             <Link key={p._id} to={`/admin/dashboard/update-product/${p.slug}`} className='product-link'>
                                 <div className="card m-3" style={{ width: "18rem", height: "80%" }}  >
                                     <img
-                                        src={`/products/product-photo/${p._id}`}
+                                        src={`http://localhost:8080/products/product-photo/${p._id}`}
                                         className="card-img-top"
                                         style={{ height: "70%" }} alt={p.name} />
 

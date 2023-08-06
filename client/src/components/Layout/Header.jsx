@@ -48,7 +48,7 @@ const Header = () => {
                                 </NavLink>
                             </li>
                             <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" to={"/categories"} role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link className="nav-link dropdown-toggle" to={"http://localhost:8080/categories"} role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categories
                                 </Link>
                                 <ul className="dropdown-menu">

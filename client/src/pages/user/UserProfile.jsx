@@ -21,7 +21,7 @@ const UserProfile = () => {
         e.preventDefault()
         try {
             debugger
-            const response = await axios.put('/auth/profile', { name, email, password, phone, address }, {
+            const response = await axios.put('http://localhost:8080/auth/profile', { name, email, password, phone, address }, {
                 headers: {
                     "Authorization": data?.token
                 }

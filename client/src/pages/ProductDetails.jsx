@@ -16,7 +16,7 @@ const ProductDetails = () => {
 
     const getSimilarProducts = async (pid, cid) => {
         try {
-            const resposne = await axios.get(`/products/related-products/${pid}/${cid}`)
+            const resposne = await axios.get(`http://localhost:8080/products/related-products/${pid}/${cid}`)
             if (resposne?.data?.success) {
                 setRelatedProducts(resposne.data.products)
             } else {
@@ -41,7 +41,7 @@ const ProductDetails = () => {
     const getProduct = async () => {
         try {
 
-            const resposne = await axios.get(`/products/single-product/${params.slug}`)
+            const resposne = await axios.get(`http://localhost:8080/products/single-product/${params.slug}`)
             setProduct(resposne?.data?.product)
 
             getSimilarProducts(resposne?.data.product._id, resposne?.data.product.category._id) //calling similar products with id's
@@ -62,7 +62,7 @@ const ProductDetails = () => {
             <div className="row container mt-2">
                 <div className="col-md-6">
                     <img
-                        src={`/products/product-photo/${product._id}`}
+                        src={`http://localhost:8080/products/product-photo/${product._id}`}
                         className="card-img-top"
                         height="500"
                         alt={product.name} />
@@ -87,7 +87,7 @@ const ProductDetails = () => {
 
                         <div className="card m-3" style={{ width: "18rem" }}  >
                             <img
-                                src={`/products/product-photo/${p._id}`}
+                                src={`http://localhost:8080/products/product-photo/${p._id}`}
                                 className="card-img-top" alt={p.name} style={{ height: "75%" }} />
 
                             <div className="card-body">

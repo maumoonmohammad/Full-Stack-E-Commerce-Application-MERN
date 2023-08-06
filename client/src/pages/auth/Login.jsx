@@ -23,7 +23,7 @@ const Login = () => {
 
         try {
 
-            await axios.post('/auth/login', { email, password }).then((response) => {
+            await axios.post('http://localhost:8080/auth/login', { email, password }).then((response) => {
                 if (response.data.success) {
 
                     toast.success(response.data.message)
