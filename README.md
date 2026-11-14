@@ -2,7 +2,6 @@
 
 A full-featured e-commerce web application built with the MERN stack (MongoDB, Express, React, Node.js). It includes user authentication, role-based access for customers and admins, a complete product catalog with search and filtering, a shopping cart, and a payment gateway.
 
-**Live demo:** https://impossible-ray-headscarf.cyclic.app/
 
 ## Features
 
