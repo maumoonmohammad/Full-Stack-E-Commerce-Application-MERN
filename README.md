@@ -64,7 +64,7 @@ Create a `.env` file in the project root:
 
 ```env
 BPORT=5000
-MONGO_URL=your-mongodb-connection-string
+URL_DB=your-mongodb-connection-string
 JWT_SECRET=your-jwt-secret
 BRAINTREE_MERCHANT_ID=your-merchant-id
 BRAINTREE_PUBLIC_KEY=your-public-key
